@@ -18,5 +18,5 @@ class Productor(Thread):
                     self.cond.wait()
                 time.sleep(randint(1,5))
                 obj = self.queue.put('objeto')
-                print(f"{self.name} esta produciendo {obj}.")
+                print(f"{self.name} esta produciendo objeto.")
                 self.cond.notifyAll()
