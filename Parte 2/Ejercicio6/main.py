@@ -1,4 +1,6 @@
-from threading import Thread, Condition
+from filosofo import Filosofo
 
 if __name__ == "__main__":
-    cond = Condition()
+    for i in range(5):
+        filosofo = Filosofo(str(i))
+        filosofo.start()
